@@ -273,8 +273,8 @@ struct upower_tbl upower_tbl_cci_6785 = {
 
 struct upower_tbl upower_tbl_l_6785T = {
 	.row = {
-		{.cap = 110, .volt = 60000, .dyn_pwr = 13260,
-			.lkg_pwr = {34199, 34199, 34199, 34199, 34199, 34199} },
+		{.cap = 110, .volt = 59375, .dyn_pwr = 12985,
+			.lkg_pwr = {33729, 33729, 33729, 33729, 33729, 33729} },
 		{.cap = 122, .volt = 60000, .dyn_pwr = 14733,
 			.lkg_pwr = {34199, 34199, 34199, 34199, 34199, 34199} },
 		{.cap = 188, .volt = 67500, .dyn_pwr = 28865,
@@ -321,7 +321,7 @@ struct upower_tbl upower_tbl_l_6785T = {
 
 struct upower_tbl upower_tbl_cluster_l_6785T = {
 	.row = {
-		{.cap = 110, .volt = 60000, .dyn_pwr = 0,
+		{.cap = 110, .volt = 59375, .dyn_pwr = 0,
 			.lkg_pwr = {0, 0, 0, 0, 0, 0} },
 		{.cap = 122, .volt = 60000, .dyn_pwr = 0,
 			.lkg_pwr = {0, 0, 0, 0, 0, 0} },

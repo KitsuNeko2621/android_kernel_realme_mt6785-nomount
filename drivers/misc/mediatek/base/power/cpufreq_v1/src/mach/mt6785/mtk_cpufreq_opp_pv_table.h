@@ -97,7 +97,7 @@ static unsigned int FY_6785TTbl[NR_FREQ * NR_MT_CPU_DVFS][ARRAY_COL_SIZE] = {
 	{ 875, 48, 2, 1 },
 	{ 774, 44, 4, 1 },
 	{ 500, 32, 4, 1 },
-	{ 450, 32, 4, 1 },
+	{ 450, 31, 4, 1 },
 
 
 

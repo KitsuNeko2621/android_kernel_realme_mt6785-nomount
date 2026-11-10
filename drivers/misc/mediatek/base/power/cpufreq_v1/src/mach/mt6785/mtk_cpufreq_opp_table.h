@@ -194,7 +194,7 @@
 #define CPU_DVFS_VOLT12_VPROC1_6785T     70000          /* 10uV */
 #define CPU_DVFS_VOLT13_VPROC1_6785T     67500          /* 10uV */
 #define CPU_DVFS_VOLT14_VPROC1_6785T     60000          /* 10uV */
-#define CPU_DVFS_VOLT15_VPROC1_6785T     60000          /* 10uV */
+#define CPU_DVFS_VOLT15_VPROC1_6785T     59375          /* 10uV */
 
 /* for DVFS OPP table B */
 #define CPU_DVFS_VOLT0_VPROC2_6785T	 111875		/* 10uV */
