@@ -82,8 +82,7 @@ static unsigned int FY_6785Tbl[NR_FREQ * NR_MT_CPU_DVFS][ARRAY_COL_SIZE] = {
 static unsigned int FY_6785TTbl[NR_FREQ * NR_MT_CPU_DVFS][ARRAY_COL_SIZE] = {
 	/* Freq, Vproc, post_div, clk_div */
 	/* LL */
-	{ 2000, 101, 1, 1 },
-	{ 1933, 97, 1, 1 },
+	{ 1900, 95, 1, 1 },
 	{ 1866, 93, 1, 1 },
 	{ 1800, 88, 1, 1 },
 	{ 1733, 84, 1, 1 },
@@ -98,12 +97,13 @@ static unsigned int FY_6785TTbl[NR_FREQ * NR_MT_CPU_DVFS][ARRAY_COL_SIZE] = {
 	{ 875, 48, 2, 1 },
 	{ 774, 44, 4, 1 },
 	{ 500, 32, 4, 1 },
+	{ 450, 32, 4, 1 },
 
 
 
 	/* L */
-	{ 2100, 120, 1, 1 },
 	{ 2050, 115, 1, 1 },
+	{ 2002, 112, 1, 1 },
 	{ 1986, 111, 1, 1 },
 	{ 1860, 102, 1, 1 },
 	{ 1796, 98, 1, 1 },
