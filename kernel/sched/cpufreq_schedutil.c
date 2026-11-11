@@ -1233,7 +1233,14 @@ static int sugov_init(struct cpufreq_policy *policy)
 	}
 
 	tunables->up_rate_limit_us = cpufreq_policy_transition_delay_us(policy);
-	tunables->down_rate_limit_us = cpufreq_policy_transition_delay_us(policy);
+	/*
+	 * Video playback smoothness: after a frequency change, hold it for at
+	 * least ~one 30/60 fps frame period before stepping down. With the
+	 * default 1 ms the CPU drops to the lowest OPP between frame bursts
+	 * and has to ramp up again for the next frame, which shows as jank.
+	 */
+	tunables->down_rate_limit_us =
+		max(cpufreq_policy_transition_delay_us(policy), 20000U);
 
 #if defined(OPLUS_FEATURE_SCHEDUTIL_USE_TL) && defined(CONFIG_SCHEDUTIL_USE_TL)
 	tunables->target_loads = default_target_loads;
