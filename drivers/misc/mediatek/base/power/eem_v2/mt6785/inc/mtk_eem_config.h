@@ -342,7 +342,7 @@ enum mt_cpu_dvfs_id {
 #define DVTFIXED_M_VAL	(0x07)
 
 
-#define VMAX_VAL_B		(0x73) /* volt domain: 1.11875v*/
+#define VMAX_VAL_B		(0x77) /* volt domain: 1.14375v*/
 #define VMIN_VAL_B		(0x20) /* volt domain: 0.6v*/
 #define VCO_VAL_B		(0x20) /* volt domain: 0.6v*/
 #define DVTFIXED_VAL_B	(0x6)
@@ -399,7 +399,7 @@ enum mt_cpu_dvfs_id {
 #define DVTFIXED_VAL_H			(0x03)
 
 /* different for B_H */
-#define VMAX_VAL_BH			(0x73) /* volt domain: 1.11875v*/
+#define VMAX_VAL_BH			(0x77) /* volt domain: 1.14375v*/
 #define VMIN_VAL_BH			(0x20)
 #define VCO_VAL_BH			(0x20)
 #define DVTFIXED_VAL_BH		(0x6)
