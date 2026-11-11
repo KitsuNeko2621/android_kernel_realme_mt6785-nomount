@@ -1751,6 +1751,14 @@ static ssize_t disksize_store(struct device *dev,
 	zram->disksize = disksize;
 	set_capacity(zram->disk, zram->disksize >> SECTOR_SHIFT);
 
+       /*
+        * Default cap on real RAM used by zram (about 45% of total RAM) so
+        * compressed swap can never starve the system. It is cleared on
+        * reset and can still be changed through the mem_limit attribute.
+        */
+	if (!zram->limit_pages)
+		zram->limit_pages = (totalram_pages * 45 / 100);
+
 	revalidate_disk(zram->disk);
 	up_write(&zram->init_lock);
 

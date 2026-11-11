@@ -1012,11 +1012,14 @@ void __init swap_setup(void)
 {
 	unsigned long megs = totalram_pages >> (20 - PAGE_SHIFT);
 
-	/* Use a smaller cluster for small-memory machines */
-	if (megs < 16)
-		page_cluster = 2;
-	else
-		page_cluster = 3;
+	/*
+	 * Swap is zram only: no seek cost, so do not read ahead swap pages
+	 * (page_cluster = 0 -> one page per swap-in). Fewer wasted
+	 * decompressions and less memory churn.
+	 */
+	(void)megs;
+	page_cluster = 0;
+
 	/*
 	 * Right now other parts of the system means that we
 	 * _really_ don't want to cluster much more
